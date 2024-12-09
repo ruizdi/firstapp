@@ -1,0 +1,12 @@
+<% content_for :title, "Editing directly report" %>
+
+<h1>Editing directly report</h1>
+
+<%= render "form", directly_report: @directly_report %>
+
+<br>
+
+<div>
+  <%= link_to "Show", @directly_report, class:"btn btn-secondary" %> 
+  <%= link_to "Back", directly_reports_path, class:"btn btn-dark" %>
+</div>

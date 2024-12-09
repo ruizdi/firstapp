@@ -1,0 +1,2 @@
+class DirectlyReport < ApplicationRecord
+end

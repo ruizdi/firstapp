@@ -1,0 +1,14 @@
+<% content_for :title, "New directly report" %>
+<br>
+<div class="container-fluid bg-primary-subtle p-5">
+<br>
+  <h1>New direct report</h1>
+  <br>
+  <%= render "form", directly_report: @directly_report %>
+
+  <br>
+
+  <div>
+    <%= link_to "Back ", directly_reports_path , class:"btn btn-dark"%>
+  </div>
+</div>

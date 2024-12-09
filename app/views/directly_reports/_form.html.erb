@@ -1,0 +1,34 @@
+<%= form_with(model: directly_report) do |form| %>
+  <% if directly_report.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(directly_report.errors.count, "error") %> prohibited this directly_report from being saved:</h2>
+
+      <ul>
+        <% directly_report.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group">
+    <%= form.text_field :first_name, class:"form-control", placeholder: "First Name" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.text_field :last_name, class:"form-control", placeholder: "FirLastdt Name" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.text_field :email, class:"form-control", placeholder: "Email" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.text_field :title, class:"form-control", placeholder: "Title" %>
+  </div>
+
+  <div>
+    <br>
+    <%= form.submit class:"btn btn-secondary" %>
+  </div>
+<% end %>

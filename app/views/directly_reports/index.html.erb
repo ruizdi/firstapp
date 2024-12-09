@@ -1,0 +1,35 @@
+
+<% content_for :title, "Directly reports" %>
+<br>
+<div class="container-fluid bg-primary-subtle p-5">
+  <h1>Home Direct reports</h1>
+  <br>
+  <table class="table table-bordered table-striped table-success table-hover">
+    <thead class="table-dark">
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Title</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @directly_reports.each do |directly_report| %>
+      <tr>
+        <th><%= directly_report.first_name %></th>
+        <td><%= directly_report.last_name %></td>
+        <td><%= directly_report.email %></td>
+        <td><%= directly_report.title %></td> 
+        <td><%= link_to "Show", directly_report %></td>
+        <td><%= link_to "Edit", edit_directly_report_path(directly_report.id) %></td>
+        <td><%= button_to "Destroy", directly_report, method: :delete %></td>
+      </tr> 
+      <% end %> 
+    </tbody>
+  </table>
+
+  <div id="directly_reports">  
+    <%= link_to "New direct report", new_directly_report_path, class:"btn btn-secondary" %>   
+  </div>
+</div>
